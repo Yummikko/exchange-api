@@ -83,7 +83,7 @@ lazy val root = (project in file("."))
       "org.scalacheck" %% "scalacheck" % "[1.17.0,)" % "test",
       "junit" % "junit" % "[4.13.2,)" % "test"
     ),
-    dependencyOverrides += "com.google.guava" % "guava" % "32.0.1"
+    dependencyOverrides += "com.google.guava" % "guava" % "32.0.1",
     scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature"),
     javacOptions ++= Seq("-source", "17", "-target", "17", "-Xlint"),
     //javaOptions ++= Seq("-Dconfig.file=/home/naphelps/git/exchange-api/target/config.json"),
