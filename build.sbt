@@ -71,7 +71,7 @@ lazy val root = (project in file("."))
       "org.mindrot" % "jbcrypt" % "[0.4,)",                       // Last version (v0.4) release February 13, 2017
       "com.pauldijou" %% "jwt-core" % "[5.0.0,)",
       "com.github.cb372" %% "scalacache-guava" % "[0.28.0,)",
-      "com.google.guava" % "guava" % "32.0.1",
+      "com.google.guava" % "guava" % "32.0.1-jre",
       "com.osinka.i18n" %% "scala-i18n" % "[1.0.3,)",
       
       "org.apache.pekko" %% "pekko-http-testkit"    % pekkoHttpVersion.value  % Test,
@@ -83,7 +83,7 @@ lazy val root = (project in file("."))
       "org.scalacheck" %% "scalacheck" % "[1.17.0,)" % "test",
       "junit" % "junit" % "[4.13.2,)" % "test"
     ),
-    dependencyOverrides += "com.google.guava" % "guava" % "32.0.1",
+    dependencyOverrides += "com.google.guava" % "guava" % "32.0.1-jre",
     scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature"),
     javacOptions ++= Seq("-source", "17", "-target", "17", "-Xlint"),
     //javaOptions ++= Seq("-Dconfig.file=/home/naphelps/git/exchange-api/target/config.json"),
